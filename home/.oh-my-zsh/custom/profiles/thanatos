@@ -1,0 +1,10 @@
+export PATH="/home/mw/local/bin:/opt/lm32-elf/bin:/opt/lm32-rtems/bin:/home/mw/local/lm32-uclinux/bin:/opt/h8300-elf/bin:$PATH"
+
+# xilinx stuff
+export PATH="/home/mw/Xilinx/14.3/ISE_DS/common/bin/lin:/home/mw/Xilinx/14.3/ISE_DS/PlanAhead/bin:/home/mw/Xilinx/14.3/ISE_DS/ISE/bin/lin:/home/mw/Xilinx/14.3/ISE_DS/ISE/sysgen/util:/home/mw/Xilinx/14.3/ISE_DS/EDK/bin/lin:$PATH"
+export XILINX="/home/mw/Xilinx/14.3/ISE_DS/ISE"
+export XILINX_DSP="/home/mw/Xilinx/14.3/ISE_DS/ISE"
+export XILINX_EDK="/home/mw/Xilinx/14.3/ISE_DS/EDK"
+export XILINX_PLANAHEAD="/home/mw/Xilinx/14.3/ISE_DS/PlanAhead"
+
+alias irc='urxvt -title "irc" -e sh -c "ssh sraum -t dtach -A ~/.dtach/mw-weechat weechat-curses"'
