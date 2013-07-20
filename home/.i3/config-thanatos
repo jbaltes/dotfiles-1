@@ -233,5 +233,5 @@ for_window [instance="gimp"] floating enable
 exec xsetroot -cursor_name left_ptr -solid '#eee8d5'
 exec xset s off
 exec xset b off
-exec xset dpms 300 600 1200
+exec xset dpms 600 1200 1800
 
