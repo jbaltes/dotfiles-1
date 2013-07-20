@@ -36,7 +36,6 @@ set sidescroll=5
 set smartcase
 set spelllang=de,en
 set spellsuggest=double,10
-set statusline=%<%f\ %h%m%r%=%([%{Tlist_Get_Tagname_By_Line()}]%)\ #%n\ %-14.(%l/%L,%c%V%)\ %P
 set switchbuf=useopen,usetab
 set tabstop=4
 set textwidth=75
@@ -93,15 +92,6 @@ let g:buftabs_marker_modified = "*"
 
 " plugin gundo
 nnoremap <f5> :GundoToggle<CR>
-
-" plugin Tlist
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Compact_Format = 1
-let Tlist_File_Fold_Auto_Close = 0
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Use_Right_Window = 0
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Sort_Type = "name"
 
 " misc
 map <C-Enter> <C-]>
