@@ -44,7 +44,7 @@ zle -N zle-line-init
 export PATH="$HOME/.local/bin:$HOME/local/bin:$PATH"
 export CVSROOT=":pserver:mwalle@cvs:/CVSROOT"
 
-alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
+source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 unsetopt share_history
 unsetopt correct_all
