@@ -98,6 +98,9 @@ noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
+" plugin tagbar
+nnoremap <leader>l :TagbarToggle<CR>
+
 " fix cursor keys
 "  see http://superuser.com/questions/237751
 map <Esc>[B <Down>
