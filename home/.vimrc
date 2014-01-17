@@ -152,3 +152,6 @@ function! UpdateXresources()
 endfunction
 
 com! ClearWhitespaces :%s/\s\+$//
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
