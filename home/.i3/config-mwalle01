@@ -11,6 +11,7 @@
 
 set $mod Mod4
 set $dmenu_colors -nb "#eee8d5" -nf "#586e75" -sb "#d33682" -sf "#586e75"
+set $lockcmd i3lock -i ~/winscreen.png -c 3a6ea5 -p win
 
 workspace_auto_back_and_forth yes
 
@@ -188,7 +189,8 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-bindsym XF86WakeUp exec i3lock -i ~/winscreen.png -c 3a6ea5 -p win
+bindsym XF86WakeUp exec $lockcmd
+bindsym XF86Sleep exec $lockcmd && sudo /usr/sbin/pm-suspend
 bindsym $mod+Tab exec /home/mwalle/local/bin/i3-winmenu
 
 bindsym $mod+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
@@ -230,4 +232,4 @@ for_window [class="^Google-chrome$"] border 1pixel
 exec xsetroot -cursor_name left_ptr -solid '#eee8d5'
 exec xset s off
 exec xset dpms 300 600 1200
-exec xautolock -time 10 -locker 'i3lock -i ~/winscreen.png -c 3a6ea5 -p win' &
+exec xautolock -time 10 -locker '$lockcmd' &
