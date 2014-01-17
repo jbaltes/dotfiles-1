@@ -93,6 +93,15 @@ let g:buftabs_marker_modified = "*"
 " plugin gundo
 nnoremap <f5> :GundoToggle<CR>
 
+" plugin CommandT
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
+
+" fix cursor keys
+"  see http://superuser.com/questions/237751
+map <Esc>[B <Down>
+
 " misc
 map <C-Enter> <C-]>
 map <silent> <C-N> :nohl<CR>
