@@ -1,7 +1,6 @@
 URxvt*:borderLess:                    true
 URxvt*cursorBlink:                    true
-URxvt*font:                           terminus-14
-!URxvt*font:                          xft:Bitstream Vera Sans Mono:size=10
+URxvt*font:                           terminesspowerline-14
 URxvt*jumpScroll:                     true
 URxvt*scrollBar:                      false
 URxvt*scrollTtyOutput:                false
