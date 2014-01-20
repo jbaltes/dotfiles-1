@@ -83,12 +83,8 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 set foldmethod=indent
 set nofoldenable
 
-" plugin buftabs
 nnoremap <f1> :bN<CR>
 nnoremap <f2> :bn<CR>
-let g:buftabs_in_statusline = 1
-let g:buftabs_only_basename = 1
-let g:buftabs_marker_modified = "*"
 
 " plugin gundo
 nnoremap <f5> :GundoToggle<CR>
