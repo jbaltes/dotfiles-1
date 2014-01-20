@@ -165,7 +165,7 @@ bindsym Escape mode "default"
 
 #bindsym $mod+r mode "resize"
 
-bindsym $mod+m exec i3-input -p 'mark ' -l 1 -P 'Mark: '
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
 bindsym $mod+g mode "goto"
 mode "goto" {
 	bindsym $mod+0 [con_mark="0"] focus; mode "default"
@@ -212,6 +212,7 @@ bar {
 bar {
 	tray_output none
 	output VGA-1
+	status_command i3status
 	colors {
 		background #eee8d5
 		statusline #657b83
