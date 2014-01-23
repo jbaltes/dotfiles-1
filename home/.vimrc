@@ -126,6 +126,7 @@ if has("autocmd")
 	autocmd Filetype python set tabstop=8
 	autocmd Filetype python set softtabstop=4
 	autocmd Filetype python set shiftwidth=4
+	autocmd Filetype robot set sw=4 ts=4 et tw=0
 
 	" mark extra whitespaces
 	autocmd Syntax * highlight ExtraWhitespace ctermbg=red guibg=red
