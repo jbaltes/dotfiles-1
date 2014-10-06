@@ -29,7 +29,7 @@ ZSH_THEME="alanpeabody"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(profiles dircycle dirpersist git ssh-agent mess)
+plugins=(profiles dircycle dirpersist git mess)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +42,7 @@ zle-line-init () { echo -n "$bellchar" }
 zle -N zle-line-init
 
 export PATH="$HOME/.local/bin:$HOME/local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 export CVSROOT=":pserver:mwalle@cvs:/CVSROOT"
 
 source $HOME/.homesick/repos/homeshick/homeshick.sh
