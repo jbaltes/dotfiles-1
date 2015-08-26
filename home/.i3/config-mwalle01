@@ -42,6 +42,9 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run $dmenu_colors
 bindsym $mod+x [urgent=latest] focus
+bindsym $mod+Shift+C  exec /home/mwalle/.local/bin/dmenu-clip insert
+bindsym $mod+Shift+V  exec /home/mwalle/.local/bin/dmenu-clip
+bindsym $mod+Shift+Y  exec xsel -o | xclip -i -selection clipboard
 
 # change focus
 bindsym $mod+h focus left
@@ -177,7 +180,7 @@ mode "goto" {
 	bindsym $mod+7 [con_mark="7"] focus; mode "default"
 	bindsym $mod+8 [con_mark="8"] focus; mode "default"
 	bindsym $mod+9 [con_mark="9"] focus; mode "default"
-	bindsym $mod+w [class="^Google-chrome$"] focus; mode "default"
+	bindsym $mod+w [class="^Chromium$"] focus; mode "default"
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
@@ -192,7 +195,7 @@ bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 bindsym XF86HomePage exec $lockcmd
-bindsym $mod+XF86HomePage exec $lockcmd && sudo /usr/sbin/pm-suspend
+bindsym $mod+XF86HomePage exec $lockcmd && systemctl suspend
 bindsym $mod+Tab exec /home/mwalle/local/bin/i3-winmenu
 
 bindsym $mod+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
@@ -231,10 +234,14 @@ client.unfocused         #839496 #839496  #073642
 client.urgent            #dc322f #eee8d5  #dc322f
 client.background        #fdf6e3
 
-for_window [class="^Google-chrome$"] border 1pixel
+for_window [class="^Iceweasel$"] border 1pixel
+for_window [class="^Chromium$"] border 1pixel
 exec xsetroot -cursor_name left_ptr -solid '#eee8d5'
 exec xset s off
 exec xset dpms 300 600 1200
-exec xautolock -time 10 -locker '$lockcmd' &
+exec xautolock -time 10 -locker '$lockcmd' -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
+exec dispwin -d 1 ~/.local/share/dispcalGUI/storage/W416K01L0V1S\ DELL\ P2210\ 2014-09-15\ 2.2\ F-S\ 1xCurve+MTX/*icc
+exec dispwin -d 2 ~/.local/share/dispcalGUI/storage/CC28966JA929\ DELL\ 1907\ 2014-09-15\ 2.2\ F-S\ 1xCurve+MTX/*icc
+exec --no-startup-id udisks-glue
 #exec autocutsel -fork &
 #exec autocutsel -selection PRIMARY -fork &
