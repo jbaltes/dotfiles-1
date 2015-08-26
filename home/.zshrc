@@ -37,7 +37,7 @@ eval `dircolors ~/.dircolors`
 
 # beep after command
 bellchar=$'\a'
-setterm -blength 0 # Don't REALLY beep
+setopt no_BEEP
 zle-line-init () { echo -n "$bellchar" }
 zle -N zle-line-init
 
